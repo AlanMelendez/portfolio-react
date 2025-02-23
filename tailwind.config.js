@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
       sm: "350px",
@@ -42,11 +40,20 @@ module.exports = {
       lightGrey: "#978580",
       darkGrey: "#3f4441",
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        cyanShadow: "0px 0px 20px 0px rgba(94, 206, 220, 0.5)",
+        cyanBigShadow: "10px 10px 1000px 500px rgba(94, 206, 220, 0.3)",
+        cyanMediumShadow: "10px 10px 200px 150px rgba(94, 206, 220, 0.5)",
+        orangeBigShadow: "10px 10px 10000px 500px rgba(240, 169, 79, 0.3)",
+        orangeMediumShadow: "10px 10px 2000px 150px rgba(240, 169, 79, 0.5)",
+      },
+    },
     fontFamily: {
-      body: ['Josefin Sans'],
-      special: ['Roboto']
+      body: ["Josefin Sans"],
+      special: ['"Nunito"'],
     },
   },
   plugins: [],
 }
+
